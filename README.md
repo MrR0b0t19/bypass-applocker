@@ -60,7 +60,7 @@ Allowed            All files located in the Windows folder
 
 ```bash
 sudo apt install mono-complete
-mcs -target:library -platform:x64 -r:System.Configuration.Install.dll -out:NotMalware_IU.dll NotMalware_IU.cs
+mcs -target:library -platform:x64 -r:System.Configuration.Install.dll -out:NotMalware.exe NotMalware.cs
 ```
 
 ---
