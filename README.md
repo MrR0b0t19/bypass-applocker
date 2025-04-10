@@ -3,7 +3,7 @@
 
 ### ✅ `bypass`
 
-```markdown
+
 # 🚀 InstallUtil Shellcode Loader (.NET LOLBAS)
 
 Este proyecto es una prueba de concepto que demuestra cómo abusar del binario legítimo `InstallUtil.exe` para ejecutar código arbitrario en memoria (shellcode), incluso en entornos restringidos con AppLocker habilitado. Utiliza técnicas **LOLBAS (Living Off the Land Binaries and Scripts)** para evadir controles de seguridad.
