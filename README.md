@@ -32,3 +32,24 @@ Antes de ejecutar el ataque, asegúrate de que `InstallUtil.exe` está **permiti
 
 ```powershell
 Get-AppLockerPolicy -Effective | Test-AppLockerPolicy -Path "C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe"
+
+si ves:
+```sql
+PolicyDecision     MatchingRule
+--------------     -------------
+Allowed            All files located in the Windows folder
+
+
+✅ ¡Puedes proceder! AppLocker permite el binario y tu bypass funcionará.
+
+---
+
+💻 Requisitos
+Sistema de destino: Windows x64
+
+Shellcode compatible con x64
+
+Acceso para ejecutar InstallUtil.exe (requiere permisos elevados)
+
+Mono (para compilar desde Linux)
+
