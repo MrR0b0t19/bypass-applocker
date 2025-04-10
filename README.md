@@ -103,7 +103,7 @@ Para evitar detección por AV:
 
 ```
 .
-├── NotMalware_IU.cs         # Código fuente del loader
+├── NotMalware.cs         # Código fuente del loader
 └── README.md                # Este archivo
 ```
 
